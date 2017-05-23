@@ -13,6 +13,8 @@
 		368382C61ED40F33008B70F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 368382C41ED40F33008B70F5 /* Main.storyboard */; };
 		368382C81ED40F33008B70F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 368382C71ED40F33008B70F5 /* Assets.xcassets */; };
 		368382CB1ED40F33008B70F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 368382C91ED40F33008B70F5 /* LaunchScreen.storyboard */; };
+		36DCC0671ED4437D007A9DA5 /* SocketHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DCC0661ED4437D007A9DA5 /* SocketHandler.swift */; };
+		36DCC0691ED45A6C007A9DA5 /* RandomNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DCC0681ED45A6C007A9DA5 /* RandomNumber.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		368382C71ED40F33008B70F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		368382CA1ED40F33008B70F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		368382CC1ED40F33008B70F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		36DCC0661ED4437D007A9DA5 /* SocketHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketHandler.swift; sourceTree = "<group>"; };
+		36DCC0681ED45A6C007A9DA5 /* RandomNumber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomNumber.swift; sourceTree = "<group>"; };
 		406C733FD353EA07D468DFE8 /* Pods-NumberTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NumberTracker.release.xcconfig"; path = "Pods/Target Support Files/Pods-NumberTracker/Pods-NumberTracker.release.xcconfig"; sourceTree = "<group>"; };
 		82CD61786CC40934D335E4E8 /* Pods_NumberTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NumberTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -62,11 +66,13 @@
 			isa = PBXGroup;
 			children = (
 				368382C01ED40F33008B70F5 /* AppDelegate.swift */,
+				36DCC0661ED4437D007A9DA5 /* SocketHandler.swift */,
 				368382C21ED40F33008B70F5 /* ViewController.swift */,
 				368382C41ED40F33008B70F5 /* Main.storyboard */,
 				368382C71ED40F33008B70F5 /* Assets.xcassets */,
 				368382C91ED40F33008B70F5 /* LaunchScreen.storyboard */,
 				368382CC1ED40F33008B70F5 /* Info.plist */,
+				36DCC0681ED45A6C007A9DA5 /* RandomNumber.swift */,
 			);
 			path = NumberTracker;
 			sourceTree = "<group>";
@@ -172,7 +178,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		96B4B08B0BC2B0291CFDFC64 /* [CP] Copy Pods Resources */ = {
@@ -212,8 +218,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36DCC0671ED4437D007A9DA5 /* SocketHandler.swift in Sources */,
 				368382C31ED40F33008B70F5 /* ViewController.swift in Sources */,
 				368382C11ED40F33008B70F5 /* AppDelegate.swift in Sources */,
+				36DCC0691ED45A6C007A9DA5 /* RandomNumber.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,6 +387,7 @@
 				368382D11ED40F33008B70F5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

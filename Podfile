@@ -6,5 +6,7 @@ target 'NumberTracker' do
   use_frameworks!
 
   # Pods for NumberTracker
-
+  pod 'Socket.IO-Client-Swift'
+  pod 'Charts'
+  
 end
