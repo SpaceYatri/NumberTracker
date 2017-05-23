@@ -22,24 +22,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2ri-0L-2hL" customClass="LineChartView" customModule="Charts">
-                                <rect key="frame" x="10" y="156" width="355" height="355"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2ri-0L-2hL" customClass="LineChart" customModule="NumberTracker" customModuleProvider="target">
+                                <rect key="frame" x="10" y="215.5" width="355" height="236.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="2ri-0L-2hL" secondAttribute="height" multiplier="1:1" id="fgc-qQ-LDI"/>
+                                    <constraint firstAttribute="width" secondItem="2ri-0L-2hL" secondAttribute="height" multiplier="3:2" id="fgc-qQ-LDI"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of random numbers stored: " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KSY-F8-xI6">
+                                <rect key="frame" x="42.5" y="487" width="250" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KdN-in-0Ol">
+                                <rect key="frame" x="301" y="487" width="10" height="18"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="2ri-0L-2hL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="2av-ez-igJ"/>
                             <constraint firstItem="2ri-0L-2hL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9LM-Wx-FT8"/>
+                            <constraint firstItem="KdN-in-0Ol" firstAttribute="leading" secondItem="KSY-F8-xI6" secondAttribute="trailing" constant="8" id="9xX-NV-bk2"/>
+                            <constraint firstItem="KSY-F8-xI6" firstAttribute="top" secondItem="2ri-0L-2hL" secondAttribute="bottom" constant="35" id="C2Z-YR-dAw"/>
                             <constraint firstAttribute="trailing" secondItem="2ri-0L-2hL" secondAttribute="trailing" constant="10" id="eU9-9B-z7s"/>
+                            <constraint firstItem="KSY-F8-xI6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-20" id="esW-aB-zmN"/>
                             <constraint firstItem="2ri-0L-2hL" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="usf-Ad-59v"/>
+                            <constraint firstItem="KdN-in-0Ol" firstAttribute="top" secondItem="2ri-0L-2hL" secondAttribute="bottom" constant="35" id="zfh-DO-Ym8"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="lineChart" destination="2ri-0L-2hL" id="roc-sM-rK5"/>
+                        <outlet property="lineChart" destination="2ri-0L-2hL" id="HNj-oT-cA2"/>
+                        <outlet property="totalRandCountLabel" destination="KdN-in-0Ol" id="u3R-V2-3bV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

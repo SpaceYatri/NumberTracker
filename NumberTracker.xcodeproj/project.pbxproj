@@ -14,7 +14,8 @@
 		368382C81ED40F33008B70F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 368382C71ED40F33008B70F5 /* Assets.xcassets */; };
 		368382CB1ED40F33008B70F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 368382C91ED40F33008B70F5 /* LaunchScreen.storyboard */; };
 		36DCC0671ED4437D007A9DA5 /* SocketHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DCC0661ED4437D007A9DA5 /* SocketHandler.swift */; };
-		36DCC0691ED45A6C007A9DA5 /* RandomNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DCC0681ED45A6C007A9DA5 /* RandomNumber.swift */; };
+		36DCC06D1ED4BDD4007A9DA5 /* LineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DCC06C1ED4BDD4007A9DA5 /* LineChart.swift */; };
+		36DCC0711ED4D421007A9DA5 /* customNotifSound.caf in Resources */ = {isa = PBXBuildFile; fileRef = 36DCC0701ED4D3ED007A9DA5 /* customNotifSound.caf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +28,8 @@
 		368382CA1ED40F33008B70F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		368382CC1ED40F33008B70F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		36DCC0661ED4437D007A9DA5 /* SocketHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketHandler.swift; sourceTree = "<group>"; };
-		36DCC0681ED45A6C007A9DA5 /* RandomNumber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomNumber.swift; sourceTree = "<group>"; };
+		36DCC06C1ED4BDD4007A9DA5 /* LineChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineChart.swift; sourceTree = "<group>"; };
+		36DCC0701ED4D3ED007A9DA5 /* customNotifSound.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = customNotifSound.caf; sourceTree = "<group>"; };
 		406C733FD353EA07D468DFE8 /* Pods-NumberTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NumberTracker.release.xcconfig"; path = "Pods/Target Support Files/Pods-NumberTracker/Pods-NumberTracker.release.xcconfig"; sourceTree = "<group>"; };
 		82CD61786CC40934D335E4E8 /* Pods_NumberTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NumberTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -68,11 +70,12 @@
 				368382C01ED40F33008B70F5 /* AppDelegate.swift */,
 				36DCC0661ED4437D007A9DA5 /* SocketHandler.swift */,
 				368382C21ED40F33008B70F5 /* ViewController.swift */,
+				36DCC06C1ED4BDD4007A9DA5 /* LineChart.swift */,
 				368382C41ED40F33008B70F5 /* Main.storyboard */,
 				368382C71ED40F33008B70F5 /* Assets.xcassets */,
 				368382C91ED40F33008B70F5 /* LaunchScreen.storyboard */,
 				368382CC1ED40F33008B70F5 /* Info.plist */,
-				36DCC0681ED45A6C007A9DA5 /* RandomNumber.swift */,
+				36DCC0701ED4D3ED007A9DA5 /* customNotifSound.caf */,
 			);
 			path = NumberTracker;
 			sourceTree = "<group>";
@@ -157,6 +160,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36DCC0711ED4D421007A9DA5 /* customNotifSound.caf in Resources */,
 				368382CB1ED40F33008B70F5 /* LaunchScreen.storyboard in Resources */,
 				368382C81ED40F33008B70F5 /* Assets.xcassets in Resources */,
 				368382C61ED40F33008B70F5 /* Main.storyboard in Resources */,
@@ -219,9 +223,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				36DCC0671ED4437D007A9DA5 /* SocketHandler.swift in Sources */,
+				36DCC06D1ED4BDD4007A9DA5 /* LineChart.swift in Sources */,
 				368382C31ED40F33008B70F5 /* ViewController.swift in Sources */,
 				368382C11ED40F33008B70F5 /* AppDelegate.swift in Sources */,
-				36DCC0691ED45A6C007A9DA5 /* RandomNumber.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,7 +292,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -332,7 +336,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
