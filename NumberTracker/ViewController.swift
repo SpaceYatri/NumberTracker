@@ -9,7 +9,7 @@
 import UIKit
 import SocketIO
 import UserNotifications
-//import AudioToolbox
+import AudioToolbox
 
 let serverName = URL(string: "http://ios-test.us-east-1.elasticbeanstalk.com/")
 let nameSpace = "/random"
@@ -109,7 +109,16 @@ class ViewController: UIViewController {
             content: content,
             trigger: trigger
         )
-        UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+        UNUserNotificationCenter.current().add(request) { [weak self] (error) in
+            self?.playSound()
+        }
+    }
+    
+    func playSound() {
+        let url = NSURL(fileURLWithPath: Bundle.main.path(forResource: "customNotifSound", ofType: ".caf")!)
+        var soundId = SystemSoundID()
+        AudioServicesCreateSystemSoundID(url, &soundId)
+        AudioServicesPlaySystemSound(soundId)
     }
     
 }

@@ -43,18 +43,27 @@ class LineChart: LineChartView {
             dataEntries.insert(dataEntry, at: 0)
         }
         let chartDataSet = LineChartDataSet(values: dataEntries, label: "Random Numbers")
-        chartDataSet.axisDependency = .left // Line will correlate with left axis values
+        chartDataSet.axisDependency = .left
         chartDataSet.setColor(chartColor)
         chartDataSet.lineWidth = 1.5
         chartDataSet.mode = .horizontalBezier
         chartDataSet.cubicIntensity = 0.5
-        chartDataSet.drawCircleHoleEnabled = true
-        chartDataSet.drawCirclesEnabled = true
+        chartDataSet.drawCircleHoleEnabled = false
+        chartDataSet.drawCirclesEnabled = false
         chartDataSet.circleHoleRadius = 2
         chartDataSet.circleRadius = 3
         chartDataSet.circleColors = [chartColor]
         chartDataSet.drawValuesEnabled = false
+        chartDataSet.fillColor = NSUIColor(cgColor: UIColor.gray.cgColor)
         
+        let gradientColors = [chartColor.cgColor, chartColor.cgColor, UIColor.clear.cgColor, UIColor.clear.cgColor] as CFArray
+        let colorLocations:[CGFloat] = [10/10, 7/10, 6.99/10, 0/10]
+        let gradient = CGGradient.init(colorsSpace: CGColorSpaceCreateDeviceRGB(), colors: gradientColors, locations: colorLocations)
+        chartDataSet.fill = Fill.fillWithLinearGradient(gradient!, angle: 90.0)
+        
+        chartDataSet.fillAlpha = 1;
+        chartDataSet.drawFilledEnabled = true
+
         var dataSets : [LineChartDataSet] = [LineChartDataSet]()
         dataSets.append(chartDataSet)
         
