@@ -22,21 +22,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="5OT-ic-7fZ">
+                                <rect key="frame" x="0.0" y="-20" width="375" height="687"/>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2ri-0L-2hL" customClass="LineChart" customModule="NumberTracker" customModuleProvider="target">
-                                <rect key="frame" x="10" y="215.5" width="355" height="236.5"/>
+                                <rect key="frame" x="10" y="234" width="355" height="199.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="2ri-0L-2hL" secondAttribute="height" multiplier="3:2" id="fgc-qQ-LDI"/>
+                                    <constraint firstAttribute="width" secondItem="2ri-0L-2hL" secondAttribute="height" multiplier="16:9" id="fgc-qQ-LDI"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of random numbers stored: " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KSY-F8-xI6">
-                                <rect key="frame" x="42.5" y="487" width="250" height="18"/>
+                                <rect key="frame" x="42.5" y="468.5" width="250" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KdN-in-0Ol">
-                                <rect key="frame" x="301" y="487" width="10" height="18"/>
+                                <rect key="frame" x="301" y="468.5" width="10" height="18"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -48,12 +51,17 @@
                             <constraint firstItem="2ri-0L-2hL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9LM-Wx-FT8"/>
                             <constraint firstItem="KdN-in-0Ol" firstAttribute="leading" secondItem="KSY-F8-xI6" secondAttribute="trailing" constant="8" id="9xX-NV-bk2"/>
                             <constraint firstItem="KSY-F8-xI6" firstAttribute="top" secondItem="2ri-0L-2hL" secondAttribute="bottom" constant="35" id="C2Z-YR-dAw"/>
+                            <constraint firstItem="5OT-ic-7fZ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="FBm-Pe-aiX"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5OT-ic-7fZ" secondAttribute="bottom" id="dAH-zW-jjQ"/>
                             <constraint firstAttribute="trailing" secondItem="2ri-0L-2hL" secondAttribute="trailing" constant="10" id="eU9-9B-z7s"/>
                             <constraint firstItem="KSY-F8-xI6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-20" id="esW-aB-zmN"/>
+                            <constraint firstAttribute="trailing" secondItem="5OT-ic-7fZ" secondAttribute="trailing" id="ksa-YS-7ez"/>
+                            <constraint firstItem="5OT-ic-7fZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="lcl-mM-gsZ"/>
                             <constraint firstItem="2ri-0L-2hL" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="usf-Ad-59v"/>
                             <constraint firstItem="KdN-in-0Ol" firstAttribute="top" secondItem="2ri-0L-2hL" secondAttribute="bottom" constant="35" id="zfh-DO-Ym8"/>
                         </constraints>
                     </view>
+                    <nil key="simulatedStatusBarMetrics"/>
                     <connections>
                         <outlet property="lineChart" destination="2ri-0L-2hL" id="HNj-oT-cA2"/>
                         <outlet property="totalRandCountLabel" destination="KdN-in-0Ol" id="u3R-V2-3bV"/>
@@ -64,4 +72,7 @@
             <point key="canvasLocation" x="140" y="127.28635682158921"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="background" width="1080" height="1920"/>
+    </resources>
 </document>

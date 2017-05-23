@@ -32,6 +32,8 @@ class LineChart: LineChartView {
         rightAxis.enabled = false
         xAxis.drawLabelsEnabled = false
         chartDescription?.text = ""
+        isOpaque = false
+        backgroundColor = UIColor.clear
     }
     
     func updateChart(withData data: [Int]) {
